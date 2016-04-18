@@ -1,6 +1,6 @@
-We have number of servers that share NFS mounts, and require mechanism for remote command execution. 
+If you are searching for a simple remote command execution tool (based on bash, python) and most of your target servers share NFS mount, this library might help you to advance faster to your goal.
 
-This is a poor man client/server prototype put together in couple days to satisfy the following principles: 
+Here is a poor man client/server prototype put together in couple days to satisfy the following principles: 
 
 * robustness
 * flexibility
@@ -27,3 +27,4 @@ This is a poor man client/server prototype put together in couple days to satisf
 5. Server compares received and calculated CommandCHKSUM, and if they match, execute the command by spawning a new process. The new process create a separate log file named with CommandID. As well, outgoing command file, *nc_exec_command_out.log*, is updated by appending CommandID and Command string.
 
 If you need interactive command line client, use *nc_cleint.sh*. If you are trying to embed this code into existing application, then use python based *py_client.py* prototype and modify to fit your goals.
+
